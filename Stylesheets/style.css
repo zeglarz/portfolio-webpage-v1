@@ -1,0 +1,5 @@
+.slides-navigation .prev,
+.slides-navigation .next {
+    opacity: 30%;
+    padding: 20px;
+}
