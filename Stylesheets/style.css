@@ -12,19 +12,25 @@
     position: absolute;
     z-index: 3;
     background-color: black;
-    opacity: 50%
+    opacity: 70%
 }
 
 
 .slides-navigation .prev,
 .slides-navigation .next {
     opacity: 30%;
-    padding: 20px;
+    padding: 7px;
+    transform: translateY(100%);
+}
+
+.slides-navigation svg {
+    height: 40px;
 
 }
 
 .slides-navigation {
     z-index: 6;
+
 }
 
 .titleMessage {
@@ -37,15 +43,16 @@
     margin-top: -125px;
 }
 
-.titleMessage .heading p {
+.titleMessage .heading  {
     color: white;
     text-shadow: 0px 2px 5px rgba(0,0,0, 0.4);
-    font-weight: 200;
     letter-spacing:10px;
 }
 
 .titleMessage .main {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-weight: 300;
+
 }
 
 .titleMessage .sub {
@@ -55,7 +62,6 @@
 .section {
     padding: 100px 0;
     background-color: #ecf0f1;
-
 
 }
 
@@ -101,4 +107,96 @@
 
 .skill h4 {
     margin-top: 15px;
+}
+
+.skil p {
+    margin-bottom: 10px;
+}
+
+.owl-dots {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+.owl-nav { display: block !important; }
+
+.owl-prev, .owl-next {
+
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    display: block !important;
+    border:0px solid black;
+
+}
+
+.fa {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.6;
+}
+.owl-prev { left: 5x; }
+.owl-next { right: 5px; }
+
+.squareItem {
+ margin-top: 30px;
+    position: relative;
+ }
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #444;
+    border-top: none;
+
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 30%;
+    border-bottom: 2px solid #444;
+
+}
+
+.squareInnerContainer:before {
+right: 0px;
+
+}
+
+
+
+.squareInnerContainer:after {
+left: 0px
+}
+
+.squareContent h2 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #f39c12
+}
+
+.squareContent h3 {
+font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.squareIcon {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 40px;
+    height: 60px;
+    font-size: 45px;
+    margin-left: -20px;
+    color: #444;
+
 }

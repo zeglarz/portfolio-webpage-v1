@@ -15,12 +15,18 @@ $(document).ready(() => {
         typeSpeed: 70,
         loop: true,
         startDelay: 1000,
-        showCursor: false
+        showCursor: false,
+
+
     });
 
     $('.owl-carousel').owlCarousel({
         loop:true,
         items: 4,
+        dots: true,
+        nav: true,
+        smartSpeed: 900,
+        navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
         responsive:{
             0:{
                 items:1
@@ -34,12 +40,15 @@ $(document).ready(() => {
             938:{
                 items:4
             }
-        }
+        },
+
     });
 
 
 
     var skillsTopOffset = $('.skillsSection').offset().top;
+    var statsTopOffset = $('.statsSection').offset().top;
+    var countUpFinished = false;
     $(window).scroll(() => {
 
         if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
@@ -50,13 +59,24 @@ $(document).ready(() => {
                 scaleColor: false,
                 lineWidth: 9,
                 size: 152,
-                onStep: function(from, to ,percent) {
+                onStep: function(from, to, percent) {
                     $(this.el).find('.percent').text(Math.round(percent));
                 },
                 animate: { duration: 3000, enabled: true }
             });
         }
-    })
+
+        if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
+            $(".counter").each(function () {
+                var element = $(this);
+                var endVal = parseInt(element.text());
+
+                element.countup(endVal);
+            });
+
+            countUpFinished = true;
+        }
+    });
 
 });
 
