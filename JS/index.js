@@ -1,4 +1,5 @@
 var imgs= ['Assets/1.jpg', 'Assets/2.jpg', "Assets/3.jpg"];
+const PAGE_TITLE = $('title').append('Konrad Rudnicki');
 $('.slides-container').append(imgs.map(image => `<li><img src=${image} ></li>`));
 
 $(document).ready(() => {
