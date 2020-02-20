@@ -13,8 +13,8 @@ $(document).ready(() => {
     });
 
     var typed = new Typed('.typed', {
-        strings: ['Full Stack.', 'Web Developer.'],
-        typeSpeed: 70,
+        strings: ['<span style="color: #cc6666">full </span><span style="color: #b5bd68">stack</span>', '<span style="color: #f5871f">web </span><span style="color: #8959a8">developer</span>'],
+        typeSpeed: 50,
         loop: true,
         startDelay: 1000,
         showCursor: false,
@@ -86,6 +86,7 @@ $(document).ready(() => {
 
         }
     });
+    $('[data-facybox]').fancybox();
 
 
 });
