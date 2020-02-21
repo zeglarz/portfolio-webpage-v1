@@ -73,7 +73,7 @@ body {
     z-index: 5;
     position: absolute;
     height: 250px;
-    top: 47%;
+    top: 46%;
     width: 100%;
     text-align: center;
     margin-top: -125px;
@@ -247,12 +247,20 @@ a.contactButton {
     margin-top: 20px;
     border: 1px solid #fff;
     border-radius: 4px;
+
+
+
 }
 
 a.contactButton:hover {
     background-color: white;
     color: #f39c12;
     text-decoration: none;
+    -webkit-transition: all 0.2s linear, 0.5s;
+    -moz-transition: all 0.2s linear, 0.5s;
+    -o-transition: all 0.2s linear, 0.5s;
+    -ms-transition: all 0.2s linear, 0.5s;
+    -transition: all 0.2s linear, 0.5s;
 }
 
 @bg: #2d2d37; // Dark blue
@@ -273,9 +281,9 @@ a { color: white; text-decoration: none; }
     font-size: 0.8rem;
 }
 .bounce {
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
+    -moz-animation: bounce 2.2s infinite;
+    -webkit-animation: bounce 2.2s infinite;
+    animation: bounce 2.2s infinite;
 }
 
 @keyframes bounce {
@@ -368,6 +376,14 @@ a { color: white; text-decoration: none; }
     display: block;
 }
 
+.filter a:hover {
+    text-decoration: none;
+    background-color: #f39c12;
+    opacity: 0.8;
+    color: white;
+
+}
+
 .filter li {
     display: inline-block;
     padding: 5px;
@@ -388,4 +404,178 @@ a { color: white; text-decoration: none; }
     text-align: center;
     padding-bottom: 40px;
     width: 100%;
+}
+.items li {
+    display: inline-block;
+    padding: 5px;
+}
+.items li img {
+    width: 100%;
+
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+
+}
+
+.items-container {
+    width: 100%;
+}
+.items .item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.items .icons {
+    position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px auto 0 -47px;
+    text-align: center;
+    z-index: 3;
+}
+
+.items .icons i {
+    font-size: 20px;
+    margin-top: 9px;
+    color: white;
+}
+
+.items a {
+    width: 40px;
+    height: 40px;
+    background-color: #f39c12;
+    position: relative;
+    display: inline-block;
+    opacity: 0.8;
+
+    -webkit-transition: all 0.2s linear, 0.3s;
+    -moz-transition: all 0.2s linear, 0.3s;
+    -o-transition: all 0.2s linear, 0.3s;
+    -ms-transition: all 0.2s linear, 0.3s;
+    -transition: all 0.2s linear, 0.3s;
+}
+
+.imageOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    -transition: all 0.2s linear, 1s;
+
+
+}
+.items .item:hover .imageOverlay {
+    opacity: 1;
+}
+
+.items .openButton {
+    float: left;
+    left: -200px;
+}
+.items .projectLink {
+    float: right;
+    right: -200px;
+}
+
+.items .item:hover .openButton {
+    left: 0px;
+ }
+.items .item:hover .projectLink {
+    right: 0px;
+}
+
+.items .item:hover img {
+    -webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -transform: scale(1.05, 1.05);
+}
+.items {
+    padding: 0;
+}
+
+.copyright-section {
+  background-color: #222222;
+    color: lightgray;
+    padding: 30px 5px;
+    font-size: 0.7em;
+
+}
+.copyright-section p {
+    margin: 0;
+}
+
+#navigation {
+    background-color: #f39c12;
+    padding: 20px 10px;
+    z-index: 100;
+    opacity: 0.9;
+    width: 100%;
+
+
+}
+
+#navigation li {
+    padding: 0 10px;
+    font-size: 0.1em;
+
+
+}
+#navigation li a {
+    color: #bdc3c7;
+
+}
+.navbar-brand,
+.navbar-brand:hover {
+    color: white;
+    font-size: 1.2em;
+}
+.navbar-nav a:hover,
+.navbar-nav a {
+    color: white;
+    font-size: 0.9em;
+
+}
+
+.navbar-toggler-icon i {
+    color: white;
+    font-size: 25px;
+    margin-top: 3px;
+}
+
+.fixedNav #navigation {
+    position: fixed;
+    top: 0;
+
+}
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.loader .inner {
+    width: 100%;
+    height: 100%;
+    background: url(../Assets/loader.svg) center center no-repeat;
 }

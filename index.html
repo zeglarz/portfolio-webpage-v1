@@ -59,6 +59,11 @@
     <title></title>
   </head>
   <body>
+    <div class="loader">
+      <div class="inner">
+
+      </div>
+    </div>
 
     <div class="slides-container" id="slides">
       <div class="overlay"></div>
@@ -94,7 +99,28 @@
       </nav>
 
     </div>
+<!--    Navbar    -->
+    <nav id="navigation" class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">Konrad Rudnicki</a>
 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#about">About</a>
+          <a class="nav-item nav-link" href="#skills">Skills</a>
+          <a class="nav-item nav-link" href="#stats">Stats</a>
+          <a class="nav-item nav-link" href="#contact">Contact</a>
+          <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+
+
+
+        </div>
+      </div>
+    </nav>
     <div class="section" id="about">
       <div class="container">
         <div class="row">
@@ -281,16 +307,16 @@
           <div class="filter">
             <ul id="filters">
               <li><a href="#" data-filter="*" class="current">ALL</a></li>
-              <li><a href="#" data-filter="*" class=".apps">Apps</a></li>
-              <li><a href="#" data-filter="*" class=".me">Me</a></li>
-              <li><a href="#" data-filter="*" class=".websites">Websites</a></li>
+              <li><a href="#" data-filter=".apps" >Apps</a></li>
+              <li><a href="#" data-filter=".me">Me</a></li>
+              <li><a href="#" data-filter=".websites">Websites</a></li>
 
             </ul>
           </div>
 
             <div class="items-container">
               <ul class="items">
-                <li class="apps col-xs-6 col-sm-4 col-lg-3">
+                <li onclick="" class="apps col-xs-6 col-sm-4 col-lg-3">
                   <div class="item">
                     <img src="Assets/ja-head.jpg" alt="">
                     <div class="icons">
@@ -298,11 +324,12 @@
                       <a href="" target="_blank" class="projectLink"><i class="fa fa-link"></i></a>
 
                     </div>
+                    <div class="imageOverlay"></div>
 
                   </div>
                   
                 </li>
-                <li class="apps col-xs-6 col-sm-4 col-lg-3">
+                <li onclick="" class="apps col-xs-6 col-sm-4 col-lg-3">
                   <div class="item">
                     <img src="Assets/ja-head.jpg" alt="">
                     <div class="icons">
@@ -310,11 +337,12 @@
                       <a href="" target="_blank" class="projectLink"><i class="fa fa-link"></i></a>
 
                     </div>
+                    <div class="imageOverlay"></div>
 
                   </div>
 
                 </li>
-                <li class="apps col-xs-6 col-sm-4 col-lg-3">
+                <li onclick="" class="me col-xs-6 col-sm-4 col-lg-3">
                   <div class="item">
                     <img src="Assets/ja-head.jpg" alt="">
                     <div class="icons">
@@ -322,10 +350,12 @@
                       <a href="" target="_blank" class="projectLink"><i class="fa fa-link"></i></a>
 
                     </div>
+                    <div class="imageOverlay"></div>
 
                   </div>
 
-                </li><li class="apps col-xs-6 col-sm-4 col-lg-3">
+                </li>
+                <li onclick="" class="apps col-xs-6 col-sm-4 col-lg-3">
                 <div class="item">
                   <img src="Assets/ja-head.jpg" alt="">
                   <div class="icons">
@@ -333,11 +363,12 @@
                     <a href="" target="_blank" class="projectLink"><i class="fa fa-link"></i></a>
 
                   </div>
+                  <div class="imageOverlay"></div>
 
                 </div>
 
               </li>
-                <li class="apps col-xs-6 col-sm-4 col-lg-3">
+                <li onclick="" class="websites col-xs-6 col-sm-4 col-lg-3">
                   <div class="item">
                     <img src="Assets/ja-head.jpg" alt="">
                     <div class="icons">
@@ -345,12 +376,12 @@
                       <a href="" target="_blank" class="projectLink"><i class="fa fa-link"></i></a>
 
                     </div>
-
+                      <div class="imageOverlay"></div>
                   </div>
 
                 </li>
 
-                <li class="me col-xs-6 col-sm-4 col-lg-3">
+                <li onclick="" class="me col-xs-6 col-sm-4 col-lg-3">
 
                 </li>
               </ul>
@@ -360,6 +391,12 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="copyright-section" id="portfolio">
+      <div class="col-md-12 text-center">
+        <p>&copy; Copyright Konrad Rudnicki 2020</p>
+      </div>
     </div>
 
     <script src="js/countUp.js"></script>

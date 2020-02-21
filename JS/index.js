@@ -1,7 +1,19 @@
 var imgs= ['Assets/1.jpg', 'Assets/2.jpg', "Assets/3.jpg"];
 const PAGE_TITLE = $('title').append('Konrad Rudnicki');
 $('.slides-container').append(imgs.map(image => `<li><img src=${image} ></li>`));
-
+$(window).on('load', function () {
+    $('.loader .inner').fadeOut(500, function () {
+        $('.loader').fadeOut(750);
+    });
+    $('.items').isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 1500,
+            easing: 'linear',
+            queue: false
+        }
+    });
+});
 
 $(document).ready(() => {
 
@@ -13,7 +25,7 @@ $(document).ready(() => {
     });
 
     var typed = new Typed('.typed', {
-        strings: ['<span style="color: #cc6666">full </span><span style="color: #b5bd68">stack</span>', '<span style="color: #f5871f">web </span><span style="color: #8959a8">developer</span>'],
+        strings: ['<span style="color: #d54e53">full </span><span style="color: #b9ca4a">stack</span>', '<span style="color: #f5871f">web </span><span style="color: #8959a8">developer</span>'],
         typeSpeed: 50,
         loop: true,
         startDelay: 1000,
@@ -87,6 +99,54 @@ $(document).ready(() => {
         }
     });
     $('[data-facybox]').fancybox();
+
+    $('#filters a').click(function() {
+         $('#filters .current').removeClass('current');
+         $(this).addClass('current');
+
+         let selector = $(this).attr('data-filter');
+
+        $('.items').isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1500,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        return false;
+
+    });
+
+    $('#navigation .navbar-nav a').click(function(e) {
+        e.preventDefault();
+        let targetElement = $(this).attr('href');
+        if (targetElement === '#home')  {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        } else {
+            let targetPosition = $(targetElement).offset().top;
+
+            $('html, body').animate({scrollTop: targetPosition - 50}, "slow");
+        }
+    });
+
+    const nav = $('#navigation');
+    const navTop = nav.offset().top;
+
+    $(window).on('scroll', stickyNavigation);
+
+    function stickyNavigation() {
+        const body = $('body');
+
+        if($(window).scrollTop() >= navTop) {
+            body.css('padding-top', nav.outerHeight() + 'px');
+            body.addClass('fixedNav');
+        } else {
+            body.css('padding-top', 0);
+            body.removeClass('fixedNav');
+        }
+    }
+
 
 
 });
