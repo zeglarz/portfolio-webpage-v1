@@ -63,7 +63,7 @@ $(document).ready(() => {
     const skillsTopOffset = $('.skillsSection').offset().top;
     const statsTopOffset = $('.statsSection').offset().top;
     let countUpFinished = false;
-    const navbarHeight = $("#navigation").height() + 55;
+    const navbarHeight = $("#navigation").height() + 65;
 
     $(window).scroll(() => {
 
@@ -117,7 +117,7 @@ $(document).ready(() => {
             $('.currentSection').removeClass('currentSection');
             $("#contact-link").addClass('currentSection');
         }
-        if ($(document).scrollTop() >= $("#portfolio").position().top - navbarHeight - 80) {
+        if ($(document).scrollTop() >= $("#portfolio").position().top - navbarHeight - 70) {
             $('.currentSection').removeClass('currentSection');
             $("#portfolio-link").addClass('currentSection');
         }
