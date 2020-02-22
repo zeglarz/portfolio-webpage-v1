@@ -60,9 +60,11 @@ $(document).ready(() => {
 
 
 
-    var skillsTopOffset = $('.skillsSection').offset().top;
-    var statsTopOffset = $('.statsSection').offset().top;
-    var countUpFinished = false;
+    const skillsTopOffset = $('.skillsSection').offset().top;
+    const statsTopOffset = $('.statsSection').offset().top;
+    let countUpFinished = false;
+    const navbarHeight = $("#navigation").height() + 55;
+
     $(window).scroll(() => {
 
         if(window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
@@ -82,8 +84,8 @@ $(document).ready(() => {
 
         if (!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {
             $(".counter").each(function () {
-                var element = $(this);
-                var endVal = parseInt(element.text());
+                let element = $(this);
+                let endVal = parseInt(element.text());
 
                 element.countup(endVal);
             });
@@ -97,7 +99,36 @@ $(document).ready(() => {
             $('#arrow-bounce').show();
 
         }
-    });
+            if ($(document).scrollTop() >= $("#about").position().top - navbarHeight) {
+                $('.currentSection').removeClass('currentSection');
+                $("#about-link").addClass("currentSection");
+            }
+
+            if ($(document).scrollTop() >= $("#skills").position().top - navbarHeight) {
+                $('.currentSection').removeClass('currentSection');
+                $("#skills-link").addClass("currentSection");
+            }
+
+            if ($(document).scrollTop() >= $("#stats").position().top - navbarHeight) {
+                $('.currentSection').removeClass('currentSection');
+                $("#stats-link").addClass('currentSection');
+            }
+        if ($(document).scrollTop() >= $("#contact").position().top - navbarHeight) {
+            $('.currentSection').removeClass('currentSection');
+            $("#contact-link").addClass('currentSection');
+        }
+        if ($(document).scrollTop() >= $("#portfolio").position().top - navbarHeight - 80) {
+            $('.currentSection').removeClass('currentSection');
+            $("#portfolio-link").addClass('currentSection');
+        }
+        if ($(document).scrollTop() < $("#about").position().top - navbarHeight) {
+            $('.currentSection').removeClass('currentSection');
+            $("#home-link").addClass('currentSection');
+
+        }
+
+
+        });
     $('[data-facybox]').fancybox();
 
     $('#filters a').click(function() {
@@ -147,6 +178,8 @@ $(document).ready(() => {
         }
     }
 
-
+    $('.nav-link').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
 
 });
