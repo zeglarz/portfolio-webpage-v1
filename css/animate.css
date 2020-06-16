@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2015 Daniel Eden
+*/
+
+.animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY {
+    -webkit-animation-duration: .75s;
+    animation-duration: .75s;
+}
+
+
+.bounce {
+    -moz-animation: bounce 2.2s infinite;
+    -webkit-animation: bounce 2.2s infinite;
+    animation: bounce 2.2s infinite;
+
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.flash {
+    -moz-animation: flash 2.2s infinite;
+    -webkit-animation: flash 2.2s infinite;
+    -ms-animation: flash 2.2s infinite;
+    animation-delay: 1.2s;
+}
+
+@keyframes flash {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+@-webkit-keyframes flash {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+@-moz-keyframes flash {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+@-ms-keyframes flash {
+    0% {
+        color: transparent;
+    }
+    50% {
+        color: #fff;
+    }
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes flyOutBottomLeft {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1500px, 1000px, 0);
+        transform: translate3d(-1500px, 1000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(75px, -50px, 0);
+        transform: translate3d(75px, -50px, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-16px, 10px, 0);
+        transform: translate3d(-16px, 10px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(8px, -5px, 0);
+        transform: translate3d(8px, -5px, 0);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.flyOutBottomLeft {
+    -webkit-animation-name: flyOutBottomLeft;
+    animation-name: flyOutBottomLeft;
+}

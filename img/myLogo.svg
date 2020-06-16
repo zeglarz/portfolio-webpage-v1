@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="428px" height="428px" viewBox="0 0 428 428" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>myLogo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-9.51546096%" y1="-30.8296424%" x2="87.6753199%" y2="115.83928%" id="linearGradient-1">
+            <stop stop-color="#FF0000" offset="0%"></stop>
+            <stop stop-color="#A00951" offset="17.828864%"></stop>
+            <stop stop-color="#9A0056" offset="35.9929265%"></stop>
+            <stop stop-color="#FF3D00" offset="57.9787796%"></stop>
+            <stop stop-color="#FFC900" offset="81.25%"></stop>
+            <stop stop-color="#22FF00" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-89.000000, -76.000000)">
+            <g id="myLogo" transform="translate(89.000000, 76.000000)">
+                <rect id="OuterSquare" fill="#000000" x="0" y="0" width="428" height="428"></rect>
+                <rect id="innerSquare" stroke="url(#linearGradient-1)" stroke-width="10" fill="#000000" x="29" y="29" width="371" height="371"></rect>
+                <text id="text" font-family="TrebuchetMS, Trebuchet MS" font-size="220" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="105" y="302">Kr</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
