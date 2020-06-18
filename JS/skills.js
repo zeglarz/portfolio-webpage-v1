@@ -46,6 +46,14 @@ const skills = [
             en: 'I\'ve done some projects in the past',
             pl: 'Zrealizowałem kilka mniejszych projektów w przeszłości'
         }
+    },
+    {
+        name: 'Java',
+        level: '35',
+        desc: {
+            en: 'I\'ve done some projects in the past',
+            pl: 'Zrealizowałem kilka mniejszych projektów w przeszłości'
+        }
     }
 ];
 

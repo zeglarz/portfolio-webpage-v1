@@ -2,15 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&family=Roboto+Slab:wght@200;300;400;600&display=swap');
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    outline: none !important;
 }
 
 html {
     width: 100%;
     height: 100%;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 
@@ -279,10 +277,7 @@ section {
     min-width: 20px !important;
     left: unset !important;
     right: 5px;
-}
-
-.dropdown-menu:focus {
-    outline: 0;
+    outline: none;
 }
 
 .dropdown-menu .dropdown-item {
@@ -609,7 +604,7 @@ section {
 }
 
 .owl-nav button:focus {
-    outline: 0;
+    outline: none;
 }
 
 .owl-prev {
@@ -1035,7 +1030,7 @@ button.close {
 }
 
 button.close:focus {
-    outline: 0;
+    outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -1228,7 +1223,7 @@ ul.social-buttons li a {
     height: 50px;
     font-size: 24px;
     line-height: 50px;
-    outline: 0;
+    outline: none;
     color: rgba(255, 255, 255, 0.8);
     background: #333;
     -webkit-transition: all .3s;
@@ -1244,7 +1239,7 @@ ul.social-buttons li a {
         height: 40px;
         font-size: 20px;
         line-height: 40px;
-        outline: 0;
+        outline: none;
         color: rgba(255, 255, 255, 0.8);
         -webkit-transition: all .3s;
         -moz-transition: all .3s;

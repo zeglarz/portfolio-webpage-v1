@@ -1,7 +1,10 @@
 const projects = [
     {
         title: 'News Feed API',
-        subtitle: 'Personal BootCamp Project',
+        subtitle: {
+            en: 'Webpack JavaScript App | Personal Bootcamp Project @ Connectis',
+            pl: 'Aplikacja JavaScript with Webpack | Samodzielny projekt z Bootcampu Connects'
+        },
         description: {
             en: `Project features up to date news from all around the world which are delivered by NewsAPI npm 
             module. By selecting country and category of your choice you will be presented with 20 top news 
@@ -21,7 +24,10 @@ const projects = [
     },
     {
         title: 'Random Person Generator',
-        subtitle: 'Personal Project',
+        subtitle: {
+            en: 'Flutter Mobile App | Personal Project',
+            pl: 'Aplikacja mobilna Flutter | Projekt Samodzielny'
+        },
         description: {
             en: `My first Flutter project which I published in Google Play Store. It features generation of random faux
             data of people along with their picture. Data is fetch using external REST API from https://randomuser.me . 
@@ -48,7 +54,10 @@ const projects = [
     },
     {
         title: 'DevBook',
-        subtitle: 'Personal Project',
+        subtitle: {
+            en: 'Create React App | Personal Project',
+            pl: 'Create React App | Projekt Samodzielny z Bootcampu Connects'
+        },
         description: {
             en: `The app is social media site for developers. It allows users to sign up and create portfolio 
             profile page and see profiles of other users. Logged user is also able to read, write, comment and 
@@ -69,12 +78,15 @@ const projects = [
         category: 'apps',
         img: 'img/devbook.png',
         slug: 'devbook',
-        demoURL: 'https://newsify.konradrudnicki.com',
-        gitURL: 'https://github.com/zeglarz/News-Feed-API'
+        demoURL: 'https://devbook.konradrudnicki.com',
+        gitURL: 'https://github.com/zeglarz/DevBook'
     },
     {
         title: 'Portfolio Website',
-        subtitle: 'Personal Project',
+        subtitle: {
+            en: 'Static Webpage | Personal Project',
+            pl: 'Strona Statyczna | Projekt Samodzielny'
+        },
         description: {
             en: `My very first portfolio website I've ever built. This project thought me a lot about HTML and CSS. This 
             is my first and probably last frameworkless project as future one are going to be build using React and Angular.
@@ -87,7 +99,7 @@ const projects = [
             zapewne mój ostatni projekt bez frameworku, kolejne będą wykorzystywały takie frameworki jak m. in. React i 
             Angular. Strona pokazuje moje podejście do designu, prezentacji danych oraz drobnych smaczków w postaci 
             animacji. Do zbudowania strony posłużyłem się w dużej mierze Boostrapem, jednak uzupełniłem go o wiele customowych
-            elementów od siebie np. z wykorzystnaiem flexboxa. Strona zbudowana zgodnie z filozofią 'mobile first', zatem
+            elementów od siebie np. z wykorzystaniem Flexbox'a. Strona zbudowana zgodnie z filozofią 'mobile first', zatem
             jest w pełni responsywna, czyli tak jak być powinno.`
         },
         stack: ['HTML', 'JavaScript', 'CSS', 'jQuery', 'Bootstrap', 'RWD', 'Sketch'],
@@ -99,9 +111,12 @@ const projects = [
     },
     {
         title: 'BookMates',
-        subtitle: 'Team BootCamp Final Project',
+        subtitle: {
+            en: 'React Create App | Team BootCamp Final Project',
+            pl: 'React Create App | Projekt zespołowy zaliczeńowy BootCamp Connectis '
+        },
         description: {
-            en: `Project BookMates was coded by group of 4 people as final assignment for C_School Full 
+            en: `Project BookMates was coded by group of 4 people as final assignment for Connectis' C_School Full 
             Stack Boot Camp. App is build using React in front-end, NodeJS in back-end coupled with PostgreSQL. The main
             goal of a project was to deliver an app that will connect people interested in books. My field of responsibility
             is to implement fetching book data using Google REST API, connecting with SQL database in the backend and 
@@ -126,10 +141,13 @@ const projects = [
     },
     {
         title: 'Social Ape',
-        subtitle: 'Follow Along Project',
+        subtitle: {
+            en: 'Gatsby | Follow Along Project',
+            pl: 'Gatsby | Prejekt Tutorialowy'
+        },
         description: {
-            en: `This was follow along guide on creating twitter clone app which main purpose was to familiarize myself
-            with Firebase service. This over 11 hour tutorial was very helpful with conveying ins and outs of firebase
+            en: `This was a follow along guide on how to create twitter clone app which I decided to undertake for the purpose of familiarizing myself
+            with Firebase services. This over 11 hour tutorial was very helpful with conveying ins and outs of firebase
             functionality such as storage, cloud functions, authentication and authorization and last but not least to
             perform CRUD operations on non-sql database provided by firebase. This project gave me some more practice with
             state management tool Redux. I made some twists and turns to tweak this follow-along project to my liking. 
@@ -144,12 +162,12 @@ const projects = [
             mnie było wprowadzenie tzw. sceleton loadingu, czyli wyświetlania szkieletu treśći, które dopiero są fetchowane,
             zmiast przestarzałego już podejścia, czyli tzw. loader'a najczęściej pod postacią kręcącego się kółka.`
         },
-        stack: ['Firebase', 'PostgreSQL', 'JavaScript', 'NodeJS', 'Express', 'SCSS'],
+        stack: ['React', 'Redux', 'Firebase', 'PostgreSQL', 'JavaScript', 'NodeJS', 'Express', 'SCSS'],
         category: 'apps',
         img: 'img/socialape.png',
         slug: 'socialape',
-        demoURL: 'https://bookmates.krzysztofziemski.com',
-        gitURL: 'https://github.com/KrzysztofZiemski/bookmates'
+        demoURL: 'https://socialape-659f4.web.app',
+        gitURL: 'https://github.com/zeglarz/socialape-firebase-frontend'
     }
 ];
 
@@ -202,7 +220,7 @@ const modal = (slug, title, subtitle, img, description, stack = null, gitURL, de
 
 const Cards = projects.map(({ slug, img, title, category }) => card(slug, img, title, category));
 const Projects = (lang) => projects.map(({ slug, title, subtitle, img, description, stack, gitURL, demoURL }) =>
-    modal(slug, title, subtitle, img, description[lang], stack, gitURL, demoURL));
+    modal(slug, title, subtitle[lang], img, description[lang], stack, gitURL, demoURL));
 
 $('#card-modal-container').append(Cards);
 $('body').append(Projects('en'));

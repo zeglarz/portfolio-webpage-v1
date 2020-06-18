@@ -2,6 +2,7 @@ const imgs = ['img/slides/1.jpg', 'img/slides/4.jpg', 'img/slides/3.jpg'];
 const PAGE_TITLE = $('title').text('Konrad Rudnicki');
 $('.slides-container').append(imgs.map(image => `<li><img src=${image} ></li>`));
 
+let flag = true;
 
 const owlOptions = {
     loop: true,
@@ -156,6 +157,23 @@ $(document).ready(() => {
         if ($(document).scrollTop() >= $('#experience').position().top - navbarHeight - 70) {
             $('.currentSection').removeClass('currentSection');
             $('#experience-link').addClass('currentSection');
+            if (flag) {
+                $('.skill-icon img').each(function (i, el) {
+                    let $this = $(this)
+                        .queue(function (next) {
+                            setTimeout(function () {
+                                $this.css({ 'filter': 'none' });
+                            }, i * 100);
+                            next();
+                        })
+                        .delay(500)
+                        .queue(function (next) {
+                            setTimeout(() => $this.removeAttr('style'), i * 100);
+                            next();
+                        });
+                    flag = false;
+                });
+            }
         }
         if ($(document).scrollTop() >= $('#portfolio').position().top - navbarHeight - 70) {
             $('.currentSection').removeClass('currentSection');
