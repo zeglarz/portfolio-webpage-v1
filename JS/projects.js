@@ -168,7 +168,43 @@ const projects = [
         slug: 'socialape',
         demoURL: 'https://socialape-659f4.web.app',
         gitURL: 'https://github.com/zeglarz/socialape-firebase-frontend'
-    }
+    },
+    {
+    id: 7,
+    title: 'Portfolio Website v2',
+    subtitle: {
+      en: 'Create React App TypeScript | Personal Portfolio v2',
+      pl: 'Create React App TypeScript | Portfolio Personalne 2 odsłona',
+    },
+    description: {
+      en: `The second version of my portfolio website, this time made with React. The development process was very 
+           challenging and full of various pitfalls, but I learned a lot during this time. I must admit that by far the hardest was to learn TypeScript and make the compiler happy for the most part. I won't be lying to say that I had a few moments of doubt and had thoughts of going back to old and familiar JavaScript, but I forced my way through, and I will never forget this lesson. Hopefully, will I have a bright future in my next TS endeavors? For the
+           visual part of the website, I worked with Styled-Components which I learned to love and won't ditch it for other styling solutions anytime soon. I also gave a shot and try my best with Framer-Motion in regard to making
+           my page more visually appealing with help of animations. Working with framer-motion proved easier than I initially
+           had thought, I'm very happy with the final result, and I hope you would enjoy it too as well.`,
+      pl: `Druga odsłona mojego osobistego portfolio, tym razem napisana w Reakcie. Projekt ten okazał się dużym
+           wyzwaniem, podczas którego nauczyłem się wielu nowych rzeczy. Pierwszą i najważniejszą jest TypeScript. Jest
+           to pierwsza strona od postaw napisana w tymże języku. Nie ukrywam, że krzywa uczenia była przy tym projekcie
+           dość stroma, miałem kilka momentów zwątpień, kiedy kompilator rozbłyskiwał czerwonymi kolorami niczym choinka
+           i myślałem o powrocie do starego poczciwego JavaScript-a, ale nie,
+           powiedziałem sobie, że się nie poddam! I nie żałuje tej decyzji, gdyż nie tylko udało mi się dowieźć ten projekt do końca,
+           ale chyba nawet polubiliśmy się na tyle, że kompilator już tak często się na mnie nie złości.`,
+    },
+    stack: [
+      'React',
+      'TypeScript',
+      'Styled-Components',
+      'Framer-Motion',
+      'Material UI',
+      'Formik',
+      'Sketch',
+    ],
+    category: 'apps',
+    img: 'img/portfolio-v2.jpg',
+    slug: 'portfolio-v2',
+    demoURL: 'https://konradrudnicki.com',
+    gitURL: 'https://github.com/zeglarz/portfolio-website-v2',
+  }
 ];
 
 const card = (slug, img, title, category) => (`
